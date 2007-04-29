@@ -1,8 +1,8 @@
 %define	module		DateTime-Locale
 %define	modprefix	DateTime
 %define	name		perl-%{module}
-%define	version		0.33
-%define	release		%mkrel 2
+%define	version		0.34
+%define	release		%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
