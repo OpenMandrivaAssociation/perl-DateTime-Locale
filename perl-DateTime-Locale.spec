@@ -7,19 +7,17 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
+Epoch:		2
 Summary:	Localization support for DateTime
 License:	GPL or Artistic
 Group:		Development/Perl
 Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Params::Validate) >= 0.72
-Epoch:		2
+BuildRequires:	perl(List::MoreUtils)
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The DateTime::Locale perl module is primarily a factory for the various locale
