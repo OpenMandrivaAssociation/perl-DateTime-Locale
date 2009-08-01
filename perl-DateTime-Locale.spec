@@ -1,23 +1,22 @@
-%define	module		DateTime-Locale
-%define	modprefix	DateTime
-%define	name		perl-%{module}
-%define	version		0.43
-%define	release		%mkrel 1
+%define	upstream_name    DateTime-Locale
+%define	upstream_version 0.43
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Epoch:		2
+
 Summary:	Localization support for DateTime
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Params::Validate) >= 0.72
 BuildRequires:	perl(List::MoreUtils)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The DateTime::Locale perl module is primarily a factory for the various locale
@@ -28,7 +27,7 @@ If you want to know what methods are available for locale objects, then please
 read the DateTime::Locale::Base documentation.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor destdir=%{buildroot}
@@ -47,7 +46,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/DateTime
 %{_mandir}/*/*
-
-
