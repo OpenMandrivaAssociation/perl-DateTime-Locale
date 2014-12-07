@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    11
+Release:    12
 Epoch:		2
 
 Summary:	Localization support for DateTime
