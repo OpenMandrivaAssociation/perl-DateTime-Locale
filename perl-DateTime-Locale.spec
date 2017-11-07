@@ -30,7 +30,7 @@ read the DateTime::Locale::Base documentation.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-perl Build.PL installdirs=vendor destdir=%{buildroot}
+perl Makefile.PL INSTALLDIRS=vendor destdir=%{buildroot}
 %make
 
 %check
