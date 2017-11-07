@@ -31,13 +31,13 @@ read the DateTime::Locale::Base documentation.
 
 %build
 perl Build.PL installdirs=vendor destdir=%{buildroot}
-./Build
+%make
 
 %check
-./Build test
+make test
 
 %install
-./Build install
+%makeinstall_std
 
 %files
 %doc Changes README
