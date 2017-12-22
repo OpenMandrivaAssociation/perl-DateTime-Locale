@@ -15,6 +15,7 @@ Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstr
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Params::Validate) >= 0.72
 BuildRequires:	perl(List::MoreUtils)
+BuildRequires:	perl(File::ShareDir::Install)
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
