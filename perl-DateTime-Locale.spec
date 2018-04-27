@@ -1,5 +1,5 @@
 %define	upstream_name    DateTime-Locale
-%define upstream_version 1.17
+%define upstream_version 1.19
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -44,6 +44,6 @@ make test
 %makeinstall_std
 
 %files
-%doc Changes README
+%{perl_vendorlib}/auto
 %{perl_vendorlib}/DateTime
 %{_mandir}/*/*
