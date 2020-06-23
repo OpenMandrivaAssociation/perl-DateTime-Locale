@@ -1,5 +1,5 @@
 %define	upstream_name    DateTime-Locale
-%define upstream_version 1.19
+%define upstream_version 1.25
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Epoch:		2
 Summary:	Localization support for DateTime
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		http://metacpan.org/release/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Module::Build)
