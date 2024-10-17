@@ -9,7 +9,7 @@ Epoch:		2
 Summary:	Localization support for DateTime
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/release/%{upstream_name}
+Url:		https://metacpan.org/release/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Module::Build)
