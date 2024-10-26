@@ -1,19 +1,17 @@
 %define	upstream_name    DateTime-Locale
-%define upstream_version 1.25
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    4
-Epoch:		2
+Version:    1.43
+Release:    1
 
 Summary:	Localization support for DateTime
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/release/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	perl(Module::Build)
-BuildRequires:	perl(Params::Validate) >= 0.72
+BuildRequires:	perl(Params::Validate)
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(File::ShareDir::Install)
 BuildRequires:	perl-devel
@@ -28,11 +26,11 @@ If you want to know what methods are available for locale objects, then please
 read the DateTime::Locale::Base documentation.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor destdir=%{buildroot}
-%make
+%make_build
 
 # (tpg) disable it as this module needs a lot of packages to install to finish test
 %if 0
@@ -41,7 +39,7 @@ make test
 %endif
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{perl_vendorlib}/auto
