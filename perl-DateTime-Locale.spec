@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/release/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Params::Validate)
 BuildRequires:	perl(List::MoreUtils)
