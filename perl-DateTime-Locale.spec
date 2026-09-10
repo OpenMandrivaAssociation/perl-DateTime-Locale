@@ -1,7 +1,7 @@
 %define	upstream_name    DateTime-Locale
 
 Name:       perl-%{upstream_name}
-Version:    1.45
+Version:	1.46
 Release:    1
 
 Summary:	Localization support for DateTime
